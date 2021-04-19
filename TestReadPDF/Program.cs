@@ -20,7 +20,7 @@ namespace TestReadPDF
 
             pdfLink = Console.ReadLine();
 
-            using (PdfDocument document = PdfDocument.Open(@""+pdfLink))
+            using (PdfDocument document = PdfDocument.Open(@""+pdfLink)) //Har endast testat filer som finns lokalt på datorn.
                 foreach (Page page in document.GetPages())
                 {
                     string pageText = page.Text;
@@ -51,7 +51,7 @@ namespace TestReadPDF
                 }
             }
 
-            Console.WriteLine("Att betala: " + rakning);
+            Console.WriteLine("Att betala: " + rakning + " kr.");
             Console.WriteLine("Betala senast: " + betalaSenast);
             Console.WriteLine("Bankgiro: " + bankgiro);
             Console.WriteLine("OCR-nummer: " + OCR);
